@@ -19,12 +19,15 @@ html{
 }
 h1{
     color: purple;
-    position: absolute:
+    position: absolute;
+    margin-left: 100px;  
 }
 .box2{
     width: 100px;
     height: 50px;
-    background: #888888 
+    background: #888888; 
+    position: relative;
+    bottom: 0;
 }
 .box2:hover{
     background: grey
@@ -64,4 +67,64 @@ button {
 }
 .items:nth-child(3) {
     background-color: bisque;
+}
+.toast{
+    display: flex;
+    align-items:center;
+    background-color: #fff;
+    border-radius: 2px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px 0;    
+    min-width: 300px;
+    max-width: 500px;
+    animation: slideInleft ease .4s, fakeOut linear 1s 3s forwards;
+}
+@keyframes slideInleft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes fakeOut{
+    to {
+        opacity: 0;
+    }
+}
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+}
+.toast__success {
+    border-color: #38990d;
+}
+.toast__success .toast__icon {
+    color: #38990d;
+}
+.toast__icon{
+font-size: 24px;
+}           
+.toast__body{
+flex-grow: 1 ;
+}
+.toast__title{
+font-size: 16px;
+font-weight: 600;
+margin-left: 10px;
+color: #333;
+}
+.toast__msg{
+font-size: 14px;
+color: #888;
+margin-top 4px;
+}
+.toast__close{
+font-size: 20px;
+color: rgba(0, 0, 0, 0.3);
+cursor: pointer;
 }
