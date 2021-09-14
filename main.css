@@ -22,26 +22,23 @@ h1{
     position: absolute;
     margin-left: 50px;  
 }
-.box2{
-    width: 100px;
-    height: 50px;
-    background: #888888; 
-    position: absolute;
-    bottom: 10%;
-    left: 50px
-}
-.box2:hover{
-    background: grey
-}
-.box2:active{
-    background: var(--act);
-}
 .btn{
     display: inline-block;
     text-decoration: none;
     background-color: transparent;
     border: none;
+    outline: none;
+    padding: 12px, 48px;
+    border-radius: 50px;
+    cursor: pointer;    
+    transition: opacity .2;
 }
+.btn:hover{
+    opacity: 0.8;
+}
+.btn-success{
+    background-color: grey;
+    margin: 100px 50px
 }
 .column-layout{
     margin-top: 36px;
@@ -80,9 +77,9 @@ display: flex;`
     border-radius: 2px;
     border-left: 4px solid;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
-    padding: 20px 0;    
-    min-width: 300px;
-    max-width: 500px;
+    padding: 20px ;    
+    min-width: 200px;
+    max-width: 300px;
     animation: slideInleft ease .4s, fakeOut linear 1s 3s forwards;
 }
 @keyframes slideInleft {

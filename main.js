@@ -1,35 +1,31 @@
 function toast ( {
-    title:''
-    message: '';
-    type: 'info'
-    duration = 3000
+    title = '';
+    message = '';
+    type = 'info';
+    duration = 3000;
 } ) {
-    const main = document.getElementById('toast');
+    const main = document.getElementsById('toast');
     if (main) {
         const toast = document.createElement('div');
-
         toast.classList.add('toast');
-
         toast.innerHTML = `
-            <div class="toast toast__success">
-            <div class="toast__icon">
-                <i class="fas fa-check"></i>
+        <div class="toast__icon">;
+        <i class="fas fa-check"></i>;
             </div>
             <div class="toast__body">
-                <h3 class="toast__title">succedfull</h3>
-                <p calss="toast__msg">đã được kết nối</p>
+                <h3 class="toast__title">${title} </h3>
+                <p class="toast__msg">${message}</p>
             </div>
             <div class="toast__close">
                 <i class="fas fa-times"></i>
-            </div>
-        `;
-        main.appendChild(toast)
+                </div> 
+                `;
+                main.appendChild(toast);
     }
 }
-
-toast( {
+toast ({
     title: 'success';
-    message: 'thành công';
+    message: 'vô đi nhó';
     type: 'success';
-    duration = 3000
+    duration: 3000
 });
