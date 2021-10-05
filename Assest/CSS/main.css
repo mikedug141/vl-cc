@@ -1,9 +1,5 @@
-:root{
-    --back: orange;
-    --act: black
-}
 ::selection{
-    background-color: gree;
+    background-color: green;
 }
 html{
     background-color: antiquewhite;
@@ -19,7 +15,7 @@ html{
     
 }
 h1{
-    color: purple;
+    color: var(--return-color);
     position: absolute;
     margin-left: 50px;  
 }
