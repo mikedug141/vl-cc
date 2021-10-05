@@ -16,6 +16,7 @@ html{
     box-sizing: border-box;
     background-clip: content-box;
     position: relative;
+    
 }
 h1{
     color: purple;
@@ -90,7 +91,7 @@ h1{
     }
     to {
         opacity: 1;
-        transform: translate(0);
+        transform: translateX(0);
     }
 }
 @keyframes fadeOut{
@@ -105,6 +106,9 @@ h1{
 }
 .toast__success {
     border-color: #38990d;
+}
+.toast__error{
+    border-color: red;
 }
 .toast__success .toast__icon {
     color: #38990d;
